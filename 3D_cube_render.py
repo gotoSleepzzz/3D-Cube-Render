@@ -33,7 +33,7 @@ class Cube:
         ]
         pass
 
-    def coor(self, z):
+    def projection(self, z):
         zz = 1 / (self.distance-z)
         return np.array([
             [zz, 0, 0],
@@ -83,7 +83,7 @@ class Cube:
                     temp = self.rotateY()@z
                     temp = self.rotateX()@temp
                     temp = self.rotateZ()@temp
-                    temp = self.coor(temp[2])@temp
+                    temp = self.projection(temp[2])@temp
                     temp = temp * 100
                     self.point(temp[0], temp[1])
                     edges.append(temp)
