@@ -1,6 +1,7 @@
 # 3D-Cube-Render
 
-** Demo ** 
+**Demo**
+
 ![til](./3d_cube.gif)
 
 - Requirement: numpy, tkinter, time
